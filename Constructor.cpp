@@ -108,3 +108,7 @@ int main() {
     Dosen dos("Dr. Budi", "67890", "Lektor", 15000000.0);
     // Instantiate a staff member with ID and salary
     Staff st("Siti", "54321", 5000000.0);
+    // Lecturer assigns a grade to the student
+    dos.beriNilai(&m, 3.75f);
+    cout << "Grade assigned to " << m.name
+         << " (NIM: " << m.nim << ") by " << dos.name << "." << endl;
