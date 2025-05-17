@@ -11,3 +11,9 @@ public:
     void cetakData();
     void isiData();
 };
+// Constructor allocates the array and immediately fills it with user-provided values
+angka::angka(int i) {
+    panjang = i;
+    arr = new int[i];
+    isiData();
+}
