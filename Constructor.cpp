@@ -52,4 +52,15 @@ public:
     // Method for assigning a grade to a student via pointer
     void beriNilai(Mahasiswa* m, float nilai) {
         m->grade = nilai; // Directly sets the student's private grade
-    };
+    }
+    private:
+    // Lecturer's academic rank is managed by Staff only
+    string rank;
+    // Lecturer's salary is exposed only through Universitas functions
+    double salary;
+
+    // Allow Staff to change the lecturer's rank
+    friend class Staff;
+    // Allow Universitas to view the lecturer's salary
+    friend void Universitas::lihatGajiDosen(Dosen*);
+};
