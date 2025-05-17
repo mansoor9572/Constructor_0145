@@ -22,3 +22,11 @@ class Mahasiswa {
 public:
     string name;
     string nim;
+
+    // Constructor initializes public attributes and sets default grade
+    Mahasiswa(const string& name, const string& nim)
+        : name(name), nim(nim), grade(0.0f) {}
+
+private:
+    // Grade is private and can only be modified by Dosen
+    float grade;
