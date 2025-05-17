@@ -117,3 +117,9 @@ int main() {
     st.ubahPangkat(&dos, "Lektor Kepala");
     cout << "Rank of Dosen " << dos.name
          << " changed by Staff " << st.name << "." << endl;
+    // Universitas reveals salaries of lecturer and staff
+    Universitas::lihatGajiDosen(&dos);
+    Universitas::lihatGajiStaff(&st);
+
+    return 0; 
+}
