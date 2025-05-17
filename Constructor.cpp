@@ -112,3 +112,8 @@ int main() {
     dos.beriNilai(&m, 3.75f);
     cout << "Grade assigned to " << m.name
          << " (NIM: " << m.nim << ") by " << dos.name << "." << endl;
+
+    // Staff updates the lecturer's academic rank
+    st.ubahPangkat(&dos, "Lektor Kepala");
+    cout << "Rank of Dosen " << dos.name
+         << " changed by Staff " << st.name << "." << endl;
