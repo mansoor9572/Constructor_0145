@@ -92,3 +92,8 @@ private:
     // Allow Universitas to view the staff member's salary
     friend void Universitas::lihatGajiStaff(Staff*);
 };
+// Implementation of Universitas functions to reveal private salary data
+void Universitas::lihatGajiDosen(Dosen* d) {
+    cout << "Salary of Dosen " << d->name
+         << " is: " << d->salary << endl;
+}
