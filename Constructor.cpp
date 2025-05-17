@@ -61,7 +61,33 @@ public:
 
     // Allow Staff to change the lecturer's rank
     friend class Staff;
-    
+
     // Allow Universitas to view the lecturer's salary
     friend void Universitas::lihatGajiDosen(Dosen*);
+};
+// Represents a staff member with ID and private salary information
+class Staff {
+public:
+    // Staff member's full name
+    string name;
+    // Staff identification number
+    string staffID;
+
+    // Constructor initializes staff details and salary value
+    Staff(const string& name,
+          const string& staffID,
+          double salary)
+        : name(name), staffID(staffID), salary(salary) {}
+
+    // Method for updating a lecturer's rank through a pointer
+    void ubahPangkat(Dosen* d, const string& newRank) {
+        d->rank = newRank; // Directly modifies the private rank field
+    }
+
+private:
+    // Private salary for staff, viewed only by Universitas friend
+    double salary;
+
+    // Allow Universitas to view the staff member's salary
+    friend void Universitas::lihatGajiStaff(Staff*);
 };
