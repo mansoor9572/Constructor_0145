@@ -52,4 +52,4 @@ public:
     // Method for assigning a grade to a student via pointer
     void beriNilai(Mahasiswa* m, float nilai) {
         m->grade = nilai; // Directly sets the student's private grade
-    }
+    };
