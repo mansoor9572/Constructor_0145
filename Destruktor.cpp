@@ -24,3 +24,23 @@ angka::~angka() {
     delete[] arr;
     cout << "Array memory has been released" << endl;
 }
+void angka::cetakData() {
+    for (int i = 1; i <= panjang; i++) {
+        cout << i << ": " << arr[i] << endl;
+    }
+}
+
+void angka::isiData() {
+    for (int i = 1; i <= panjang; i++) {
+        cout << i << ": ";
+        cin >> arr[i];
+    }
+    cout << endl;
+}
+
+int main() {
+    angka belajarcpp(3);                   // Stack allocation: constructor and destructor are called automatically
+    angka *ptrBelajarcpp = new angka(5);  // Heap allocation: must manually delete to invoke destructor
+    delete ptrBelajarcpp;                 // Destructor called for heap object
+    return 0;
+}
