@@ -104,3 +104,5 @@ void Universitas::lihatGajiStaff(Staff* s) {
 int main() {
     // Create a student object with name and NIM
     Mahasiswa m("Ali", "12345");
+ // Instantiate a lecturer with rank and salary
+    Dosen dos("Dr. Budi", "67890", "Lektor", 15000000.0);
