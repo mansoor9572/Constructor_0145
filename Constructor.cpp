@@ -30,3 +30,26 @@ public:
 private:
     // Grade is private and can only be modified by Dosen
     float grade;
+
+    // Grant Dosen permission to access and modify grade
+    friend class Dosen;
+};
+// Represents a lecturer with public ID info and private rank and salary
+class Dosen {
+public:
+    // Lecturer's full name
+    string name;
+    // Lecturer's unique NIDN
+    string nidn;
+
+    // Constructor initializes all lecturer attributes
+    Dosen(const string& name,
+          const string& nidn,
+          const string& rank,
+          double salary)
+        : name(name), nidn(nidn), rank(rank), salary(salary) {}
+
+    // Method for assigning a grade to a student via pointer
+    void beriNilai(Mahasiswa* m, float nilai) {
+        m->grade = nilai; // Directly sets the student's private grade
+    }
