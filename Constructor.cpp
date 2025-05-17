@@ -61,6 +61,7 @@ public:
 
     // Allow Staff to change the lecturer's rank
     friend class Staff;
+    
     // Allow Universitas to view the lecturer's salary
     friend void Universitas::lihatGajiDosen(Dosen*);
 };
