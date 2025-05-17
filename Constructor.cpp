@@ -85,7 +85,6 @@ public:
         d->rank = newRank; // Directly modifies the private rank field
     }
 
-    
 private:
     // Private salary for staff, viewed only by Universitas friend
     double salary;
