@@ -73,6 +73,7 @@ public:
     // Staff identification number
     string staffID;
 
+    
     // Constructor initializes staff details and salary value
     Staff(const string& name,
           const string& staffID,
