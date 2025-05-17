@@ -17,3 +17,10 @@ angka::angka(int i) {
     arr = new int[i];
     isiData();
 }
+// Destructor prints the array contents then frees the allocated memory
+angka::~angka() {
+    cout << endl;
+    cetakData();
+    delete[] arr;
+    cout << "Array memory has been released" << endl;
+}
