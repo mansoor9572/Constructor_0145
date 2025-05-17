@@ -97,3 +97,10 @@ void Universitas::lihatGajiDosen(Dosen* d) {
     cout << "Salary of Dosen " << d->name
          << " is: " << d->salary << endl;
 }
+void Universitas::lihatGajiStaff(Staff* s) {
+    cout << "Salary of Staff " << s->name
+         << " is: " << s->salary << endl;
+}
+int main() {
+    // Create a student object with name and NIM
+    Mahasiswa m("Ali", "12345");
