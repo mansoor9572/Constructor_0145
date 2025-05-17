@@ -16,3 +16,9 @@ public:
     // Friend function to display a staff member's private salary
     static void lihatGajiStaff(Staff* s);
 };
+
+// Represents a university student with name, ID, and a privately held grade
+class Mahasiswa {
+public:
+    string name;
+    string nim;
